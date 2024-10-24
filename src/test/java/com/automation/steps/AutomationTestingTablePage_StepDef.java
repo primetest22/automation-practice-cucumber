@@ -11,7 +11,10 @@ public class AutomationTestingTablePage_StepDef {
     }
 
     @And("^I verify values from tables$")
-    public void iVerifyValuesFromTables() {
+    public void iVerifyValuesFromTables() throws InterruptedException {
         new AutomationTestingTablePage().verifyTableHeading();
+       // Thread.sleep(1000);
+        new AutomationTestingTablePage().verityTableVales();
+
     }
 }
