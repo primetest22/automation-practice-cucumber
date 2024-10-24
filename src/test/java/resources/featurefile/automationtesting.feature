@@ -57,7 +57,10 @@ Feature: Create Account Test
     And I click on browser tab link
     And I want to interact with different browser tab
 
-
+  Scenario: I want to verify values from table
+    Given I am on homepage
+    And I click on tables link from menu
+    And I verify values from tables
 
 
 
