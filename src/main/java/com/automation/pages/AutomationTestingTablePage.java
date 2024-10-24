@@ -24,6 +24,8 @@ public class AutomationTestingTablePage extends Utility {
     //Tables
     @FindBy(xpath = "//table[@class='sortable']//thead//tr//th")
     List<WebElement> tableHeadings;
+    @FindBy(xpath = "//table[@class='sortable']//tbody//tr[1]//td")
+    List<WebElement> tableValues;
 
     //Tables methods
     public void verifyTableHeading() {
@@ -40,17 +42,36 @@ public class AutomationTestingTablePage extends Utility {
         for (WebElement eachHeading : tableHeadings) {
             for (int i = 0; i < expectedHeadings.size(); i++) {
                 if (eachHeading.getText().equalsIgnoreCase(expectedHeadings.get(i))) {
-
-                    System.out.println(eachHeading.getText());
-                    System.out.println(expectedHeadings.get(i));
-
+                    // System.out.println(eachHeading.getText());
+                    // System.out.println(expectedHeadings.get(i));
                     Assert.assertEquals(eachHeading.getText(), expectedHeadings.get(i));
                 }
+            }
+        }
+    }
 
+    public void verityTableVales() {
+        //Expected table values
+        ArrayList<String> expectedValues = new ArrayList<>();
+        expectedValues.add("Clare");
+        expectedValues.add("Matthews");
+        expectedValues.add("1976/04/22");
+        expectedValues.add("clarematthews@madeupemailacc.com");
+        expectedValues.add("United Kin");
+        expectedValues.add("Adminstrator");
+
+        for (WebElement eachValue : tableValues) {
+            for (int i = 0; i < expectedValues.size(); i++) {
+                if (eachValue.getText().equalsIgnoreCase(expectedValues.get(i))) {
+                    // System.out.println(eachValue.getText());
+                    // System.out.println(expectedValues.get(i));
+                    Assert.assertEquals(eachValue.getText(), expectedValues.get(i));
+                }
             }
         }
     }
 }
+
 
 
 
