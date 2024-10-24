@@ -390,4 +390,11 @@ public class Utility extends ManageDriver {
         }
         return destination;
     }
+
+    /////////// java script ///////////////////
+
+    public static void scrollToEle(WebElement ele){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();",ele);
+    }
 }

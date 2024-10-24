@@ -44,6 +44,16 @@ public class AutomationTestingHomePage extends Utility {
     @FindBy(linkText = "BROWSER TABS")
     WebElement browserTabLink;
 
+    //table
+    @FindBy(linkText = "TABLES")
+    WebElement tableLink;
+
+    //table
+    public void clickTableLink(){
+        scrollToEle(tableLink);
+        tableLink.click();
+    }
+
     public void clickOnMenuIcon() {
         clickMenuIcon.click();
     }
