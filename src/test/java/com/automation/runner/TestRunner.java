@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",
                 "json:target/RunCuke/cucumber.json"
-        }
-       // tags = {"@smoke, @sanity, @regression"}
-
+        }//,
+        // tags = {"@smoke,@regression"}
 )
+
 public class TestRunner {
 
     @AfterClass
@@ -31,7 +31,4 @@ public class TestRunner {
         Reporter.setSystemInfo("Maven", "3.5.9");
         Reporter.setSystemInfo("Java Version", "1.8.0_151");
     }
-
-
-
 }

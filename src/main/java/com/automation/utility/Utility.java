@@ -397,4 +397,9 @@ public class Utility extends ManageDriver {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();",ele);
     }
+
+    public static void javascriptClick(WebElement ele){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();",ele);
+    }
 }
