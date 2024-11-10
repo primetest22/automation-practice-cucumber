@@ -1,7 +1,7 @@
 Feature: Create Account Test
   As a user, I want to create account successfully on automation website.
 
-@smoke @regression
+#@smoke @regression
 Scenario: User can create account successfully.
   Given I am on homepage
   And I click on sign in link

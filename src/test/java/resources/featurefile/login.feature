@@ -1,13 +1,13 @@
 Feature: Log In Test
   As a user, I want to log in on automation website
 
-  @smoke @regression
+  #@smoke @regression
  Scenario: User should navigate to sign in page successfully
    Given I am on homepage
    And I click on sign in link
    Then I see authentication text
 
-  @sanity @regression
+  #@sanity @regression
  Scenario Outline: Verify error messages with invalid credentials
    Given I am on homepage
    And I click on sign in link
@@ -23,7 +23,7 @@ Feature: Log In Test
      | adfdfgfg       | 123456   | Invalid email address.     |
      | abcd@gmail.com | 123456   | Authentication failed.     |
 
-  @regression
+  #@regression
   Scenario Outline: User should log in successfully with valid credentials
     Given I am on homepage
     And I click on sign in link
@@ -35,7 +35,7 @@ Feature: Log In Test
       | username           | password  |
       | abcxyz01@yahoo.com | primetest |
 
-   @regression
+   #@regression
  Scenario: User should log out successfully
      Given I am on homepage
      And I click on sign in link

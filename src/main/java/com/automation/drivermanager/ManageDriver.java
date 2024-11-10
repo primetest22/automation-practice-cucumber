@@ -13,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
 import java.time.Duration;
 
 
@@ -32,6 +33,11 @@ public class ManageDriver {
             log.info("Launching Chrome Browser");
             ChromeOptions opt = new ChromeOptions();
             opt.addArguments("--remote-allow-origins=*");
+
+            //to handle browser ads
+            File file = new File("C:\\Users\\iamcp\\IdeaProjects\\crx files\\Adblock-best-ad-blocker-Chrome-Web-Store.crx");
+            opt.addExtensions(file);
+
             driver = new ChromeDriver(opt);
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
