@@ -15,10 +15,19 @@ public class PracticeExpandtesting_HomePage extends Utility {
         PageFactory.initElements(driver, this);
     }
 
-    //Dynamic table link
+    //DYNAMIC TABLE
     @FindBy(linkText = "Dynamic Table")
     WebElement dynamicTableLink;
+    //WEB INPUT LINK
+    @FindBy(linkText = "Web inputs")
+    WebElement webInputLink;
 
+
+    //web input link
+    public void clickWebInputLink(){
+        webInputLink.click();
+    }
+    //dynamic table
     public void clickDynamicTableLink(){
        // scrollToEle(dynamicTableLink);
         javascriptClick(dynamicTableLink);

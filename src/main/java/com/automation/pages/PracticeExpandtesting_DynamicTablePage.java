@@ -36,11 +36,14 @@ public class PracticeExpandtesting_DynamicTablePage extends Utility {
     public void cpuLoadMatching() throws InterruptedException {
         for (int r = 1; r <= tableValues.size(); r++) {
             WebElement browserName = driver.findElement(By.xpath("//table[@class='table table-striped']//tbody//tr[" + r + "]//td[1]"));
-            if (browserName.getText().equals("Chrome")) {
+            if (browserName.getText().equals("Chromee")) {
                 String cpuLoad = driver.findElement(By.xpath("//td[normalize-space()='Chrome']//following-sibling::*[contains(text(),'%')]")).getText();
-                       Assert.assertEquals("Chrome CPU: " + cpuLoad, yellowLableValue.getText());
-                    }
-                }
+                Assert.assertEquals("Chrome CPU: " + cpuLoad, yellowLableValue.getText());
+                break;
+              }
+
+            }
         }
     }
+
 

@@ -18,6 +18,8 @@ public class PracticeExpandtesting_HomePage_StepDef {
         new PracticeExpandtesting_HomePage().clickDynamicTableLink();
 
     }
-
-
+    @And("^I click on web input link$")
+    public void iClickOnWebInputLink() {
+        new PracticeExpandtesting_HomePage().clickWebInputLink();
+    }
 }
