@@ -15,6 +15,7 @@ public class PracticeExpandtesting_HomePage extends Utility {
         PageFactory.initElements(driver, this);
     }
 
+<<<<<<< HEAD
     //DYNAMIC TABLE
     @FindBy(linkText = "Dynamic Table")
     WebElement dynamicTableLink;
@@ -28,6 +29,12 @@ public class PracticeExpandtesting_HomePage extends Utility {
         webInputLink.click();
     }
     //dynamic table
+=======
+    //Dynamic table link
+    @FindBy(linkText = "Dynamic Table")
+    WebElement dynamicTableLink;
+
+>>>>>>> master
     public void clickDynamicTableLink(){
        // scrollToEle(dynamicTableLink);
         javascriptClick(dynamicTableLink);
