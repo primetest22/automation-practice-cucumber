@@ -2,6 +2,7 @@ package com.automation.steps;
 
 import com.automation.pages.PracticeExpandtesting_DynamicTablePage;
 import cucumber.api.java.en.And;
+import org.testng.Assert;
 
 public class PracticeExpandtesting_Dynamictablepage_StepDef {
 
