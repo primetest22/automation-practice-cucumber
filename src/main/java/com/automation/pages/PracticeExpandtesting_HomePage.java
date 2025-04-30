@@ -21,17 +21,26 @@ public class PracticeExpandtesting_HomePage extends Utility {
     //WEB INPUT LINK
     @FindBy(linkText = "Web inputs")
     WebElement webInputLink;
+    //web park
+    @FindBy(xpath = "//div[@class='card card-custom w-100 h-100']//div[@class='card-footer d-flex justify-content-between align-items-center']//a[@href='/webpark' and text()='Try it out']")
+    WebElement webPark;
 
+    //web park
+    public void clickWebParking() {
+        javascriptClick(webPark);
+
+    }
 
     //web input link
-    public void clickWebInputLink(){
+    public void clickWebInputLink() {
         webInputLink.click();
     }
+
     //dynamic table
-    public void clickDynamicTableLink(){
-       // scrollToEle(dynamicTableLink);
+    public void clickDynamicTableLink() {
+        // scrollToEle(dynamicTableLink);
         javascriptClick(dynamicTableLink);
-      //  dynamicTableLink.click();
+        //  dynamicTableLink.click();
     }
 
-   }
+}

@@ -2,7 +2,9 @@ package com.automation.utility;
 
 import com.automation.drivermanager.ManageDriver;
 import com.google.common.base.Function;
+import cucumber.api.java.eo.Se;
 import org.apache.commons.io.FileUtils;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
@@ -87,6 +89,7 @@ public class Utility extends ManageDriver {
     public void sendTextToElement(WebElement element, String str) {
         element.sendKeys(str);
     }
+
 
     /**
      * This method will return list of web elements
@@ -174,6 +177,13 @@ public class Utility extends ManageDriver {
 
     public void selectByValueFromDropDown(WebElement element, String value) {
         new Select(element).selectByValue(value);
+    }
+
+    public String selectByValueFromDropDWon(WebElement element, String value){
+        String text =  element.getText();
+        if (text.equalsIgnoreCase(value)) {
+        }
+        return value;
     }
 
     /**
